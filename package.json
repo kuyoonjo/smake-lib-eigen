@@ -1,6 +1,6 @@
 {
   "name": "@smake/eigen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript Module Template",
   "license": "MIT",
   "repository": "https://github.com/kuyoonjo/smake-lib-eigen.git",
@@ -27,7 +27,8 @@
     "clean": "rimraf lib && rimraf coverage",
     "format": "prettier --write \"{src,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "mv eigen/.gitignore eigen/.gitignore.bak",
+    "postpublish": "mv eigen/.gitignore.bak eigen/.gitignore",
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
     "build": "tsc --pretty",
     "test": "jest",
