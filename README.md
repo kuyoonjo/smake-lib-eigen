@@ -1,2 +1,2 @@
 # SMake C++ lib eigen
-[eigen v3.3.9](https://gitlab.com/libeigen/eigen/-/tree/3.3.9)
+[eigen v3.4.0](https://gitlab.com/libeigen/eigen/-/tree/3.4.0)
